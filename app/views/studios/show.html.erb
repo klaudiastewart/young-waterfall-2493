@@ -3,5 +3,8 @@
   <%= @studio.location %>
   <% @studio.movies.each do |movie| %>
     <%= movie.title %>
+    <% movie.actors.each do |actor| %>
+      <%= actor.name %>
+    <% end %>
   <% end %>
 </p>
