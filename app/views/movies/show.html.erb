@@ -1,0 +1,7 @@
+<p>Movie's Attributes</p>
+<%= @movie.title %>
+<%= @movie.creation_year %>
+<%= @movie.genre %>
+<% @movie.actors.each do |actor| %>
+  <%= actor.name %>
+<% end %>
