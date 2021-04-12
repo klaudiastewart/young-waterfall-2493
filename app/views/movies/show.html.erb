@@ -5,3 +5,8 @@
 <% @movie.actors.each do |actor| %>
   <%= actor.name %>
 <% end %>
+
+<%= form_with url: "/movies/#{@movie.id}/movie-actors", method: :post do |f| %>
+  <%= f.text_field :actor_name %>
+  <%= f.submit "Submit" %>
+<% end %>
