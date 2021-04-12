@@ -3,7 +3,8 @@
   <%= @studio.location %>
   <% @movies.each do |movie| %>
     <%= movie.title %>
-    <%= movie.actors.unique_actors %>
-    <p class="actor"><%= movie.actors.unique_actors %></p>
+    <% movie.unique_actors_by_age_and_status.each do |actor|%>
+      <p class="actor"><%= actor.name %></p>
+    <% end %>
   <% end %>
 </p>
