@@ -1,10 +1,9 @@
 <p>Studio's Attributes
   <%= @studio.name %>
   <%= @studio.location %>
-  <% @studio.movies.each do |movie| %>
+  <% @movies.each do |movie| %>
     <%= movie.title %>
-    <% movie.actors.each do |actor| %>
-      <%= actor.name %>
-    <% end %>
+    <%= movie.actors.unique_actors %>
+    <p class="actor"><%= movie.actors.unique_actors %></p>
   <% end %>
 </p>
