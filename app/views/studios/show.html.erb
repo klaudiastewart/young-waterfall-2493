@@ -1,0 +1,7 @@
+<p>Studio's Attributes
+  <%= @studio.name %>
+  <%= @studio.location %>
+  <% @studio.movies.each do |movie| %>
+    <%= movie.title %>
+  <% end %>
+</p>
